@@ -6,6 +6,9 @@ public class StraightPredicate implements PatternPredicate {
 
     @Override
     public boolean detect(PredicateRequest request) {
+        if(PatternPredicate.isMinimumStraight(request.getCards())){
+            return true;
+        }
         return PatternPredicate.isStraight(request);
     }
     @Override

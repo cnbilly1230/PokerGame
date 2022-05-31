@@ -4,6 +4,7 @@ import LabExercise.poker.java.Predicates.*;
 
 public class Detector {
     private final PatternPredicate[] patternPredicates = new PatternPredicate[]{
+            new CheatingPredicate(),
             new RoyalFlushPredicate(),
             new StraightFlushPredicate(),
             new FourOfAKindPredicate(),
