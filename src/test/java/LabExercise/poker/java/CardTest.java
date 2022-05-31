@@ -13,6 +13,7 @@ public class CardTest {
         Card card3 = Card.of(Card.Suit.DIAMOND, Card.Rank.ACE);
         Card card4 = Card.of(Card.Suit.DIAMOND, Card.Rank.KING);
         assertTrue(card1.compareTo(card2)>0);
+        assertTrue(card3.compareTo(card4)>0);
         System.out.println(card1);
 }   @Test
     public void shouldReturnFalse_WhenCompareCards() {

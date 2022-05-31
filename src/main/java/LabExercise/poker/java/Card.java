@@ -6,7 +6,7 @@ public class Card implements Comparable<Card> {
     private Suit suit;
     private Rank rank;
 
-    private Card(Suit suit, Rank rank) {
+    protected Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }

@@ -4,8 +4,13 @@ import LabExercise.poker.java.Card;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
-public final class predicateRequest {
+public final class PredicateRequest {
+
+    public static Set<Integer> MAXIMUMSRTAIGHT;
+
+    public static Set<Integer> MINIMUMSTRAIGHT;
 
     private final Card[] cards;
 
@@ -13,7 +18,8 @@ public final class predicateRequest {
 
     private final Map<Card.Rank,Integer> RankCounts;
 
-    public predicateRequest(Card[] cards) {
+
+    public PredicateRequest(Card[] cards) {
         this.cards = cards;
         this.SuitCounts = countSuit(cards);
         this.RankCounts = countRank(cards);
@@ -32,6 +38,10 @@ public final class predicateRequest {
             rankCounter.put(card.getRank(),rankCounter.getOrDefault(card.getRank(),0)+1);
         }
         return rankCounter;
+    }
+
+    public Card[] getCards() {
+        return cards;
     }
 
     public Map<Card.Suit, Integer> getSuitCounts() {
