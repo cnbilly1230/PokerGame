@@ -6,6 +6,7 @@ import LabExercise.poker.java.PatternType;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class StraightFlushPredicate implements PatternPredicate {
     @Override
@@ -25,8 +26,14 @@ public class StraightFlushPredicate implements PatternPredicate {
         }
         if (repeatingSuit != null){
             return checkIsStraight(getCardArray(repeatingSuit,cards));
-
         }
+
+//        for (Map.Entry<Card.Suit, Integer> entry : request.getSuitCounts().entrySet()) {
+//            if (entry.getValue() >= 5) {
+//
+//            }
+//        }
+
         return false;
     }
 

@@ -58,6 +58,13 @@ public interface PatternPredicate {
                 return true;
             }
         }
+
+//        for (int i = 1; i < sortedRankValues.size(); i++) {
+//            if (sortedRankValues.get(i) - sortedRankValues.get(i - 1) == 1) {
+//                //....
+//            }
+//        }
+
         return false;
     }
     static boolean isMaximumStraight (Card[] cards){

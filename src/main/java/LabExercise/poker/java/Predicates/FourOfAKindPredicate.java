@@ -6,7 +6,7 @@ import LabExercise.poker.java.PatternType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FourOfAKindPredicate implements PatternPredicate{
+public class FourOfAKindPredicate implements PatternPredicate {
     @Override
     public boolean detect(PredicateRequest request) {
         List<Integer> rankValueCounts = new ArrayList<>(request.getRankCounts().values());

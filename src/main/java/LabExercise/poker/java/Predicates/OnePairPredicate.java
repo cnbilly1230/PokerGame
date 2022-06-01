@@ -9,10 +9,21 @@ import java.util.List;
 public class OnePairPredicate implements PatternPredicate{
     @Override
     public boolean detect(PredicateRequest request) {
-        List<Integer> rankValueCounts = new ArrayList<>(request.getRankCounts().values());
-        for(int value : rankValueCounts){
-            if (value >= 2){return true;}
+//        List<Integer> rankValueCounts = new ArrayList<>(request.getRankCounts().values());
+
+        for (int count : request.getRankCounts().values()) {
+            if (count >= 2) {
+                return true;
+            }
         }
+
+//        return request.getRankCounts().values().stream()
+//                .anyMatch(count -> count >= 2);
+
+//        for(int value : rankValueCounts){
+//            if (value >= 2){return true;}
+//        }
+
         return false;
     }
     @Override

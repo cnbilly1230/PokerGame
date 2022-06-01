@@ -9,16 +9,20 @@ import java.util.List;
 public class TwoPairPredicate implements PatternPredicate {
     @Override
     public boolean detect(PredicateRequest request) {
-        List<Integer> rankValueCounts = new ArrayList<>(request.getRankCounts().values());
-        int pairCounts = 0;
-        for(int value : rankValueCounts){
-            if (value >= 2){
-                pairCounts++;}
-        }
-        if (pairCounts >= 2){
-            return true;
-        }
-        return false;
+//        List<Integer> rankValueCounts = new ArrayList<>(request.getRankCounts().values());
+//        int pairCounts = 0;
+//        for(int value : rankValueCounts){
+//            if (value >= 2){
+//                pairCounts++;}
+//        }
+//        if (pairCounts >= 2){
+//            return true;
+//        }
+//        return false;
+
+        return request.getRankCounts().values().stream()
+                .filter(count -> count >= 2)
+                .count() >= 2;
     }
 
     @Override

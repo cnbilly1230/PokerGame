@@ -96,19 +96,19 @@ public class DetectorTest {
         Card c3 = Card.of(Card.Suit.CLUBS, Card.Rank.ACE);
         Card c4 = Card.of(Card.Suit.DIAMOND, Card.Rank.THREE);
         Card c5 = Card.of(Card.Suit.SPADE, Card.Rank.THREE);
-        Card c6 = Card.of(Card.Suit.HEART, Card.Rank.FOUR);
+        Card c6 = Card.of(Card.Suit.HEART, Card.Rank.THREE);
         Card c7 = Card.of(Card.Suit.CLUBS, Card.Rank.FIVE);
         Card[] hands = new Card[]{c1,c2,c3,c4,c5,c6,c7};
         Detector detector = new Detector();
         assertEquals(PatternType.FULL_HOUSE,detector.detect(hands).getType());
     } @Test
     public void shouldReturnStraightFlushType(){
-        Card c1 = Card.of(Card.Suit.SPADE, Card.Rank.ACE);
-        Card c2 = Card.of(Card.Suit.SPADE, Card.Rank.TWO);
-        Card c3 = Card.of(Card.Suit.SPADE, Card.Rank.FOUR);
-        Card c4 = Card.of(Card.Suit.SPADE, Card.Rank.THREE);
-        Card c5 = Card.of(Card.Suit.SPADE, Card.Rank.FIVE);
-        Card c6 = Card.of(Card.Suit.HEART, Card.Rank.FOUR);
+        Card c1 = Card.of(Card.Suit.HEART, Card.Rank.ACE);
+        Card c2 = Card.of(Card.Suit.HEART, Card.Rank.TWO);
+        Card c3 = Card.of(Card.Suit.HEART, Card.Rank.FOUR);
+        Card c4 = Card.of(Card.Suit.HEART, Card.Rank.THREE);
+        Card c5 = Card.of(Card.Suit.HEART, Card.Rank.FIVE);
+        Card c6 = Card.of(Card.Suit.CLUBS, Card.Rank.FOUR);
         Card c7 = Card.of(Card.Suit.CLUBS, Card.Rank.FIVE);
         Card[] hands = new Card[]{c1,c2,c3,c4,c5,c6,c7};
         Detector detector = new Detector();
